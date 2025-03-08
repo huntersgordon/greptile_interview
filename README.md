@@ -7,7 +7,7 @@
 This project is divided into two main repositories:
 
 1. **Frontend**: Built with React and TypeScript. ⚛️ The frontend provides a developer portal accessible at the `/developer` route, which is used to generate changelogs. It outputs links to the resulting changelogs.
-2. **Backend**: Developed using Flask and Python, with SQLAlchemy for database interactions. 🐍
+2. **Backend**: Uses Flask and Python to generate and retrieve changelogs via `/generate-changelog` (POST) and `/changes/<repo_hash>` (GET) endpoints, with SQLAlchemy for database operations. 🐍
 
 ## Getting Started
 
