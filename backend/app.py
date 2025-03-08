@@ -1,22 +1,22 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_cors import CORS
-from flask_migrate import Migrate
 import os
 
 db = SQLAlchemy()
-migrate = Migrate()
 
 def create_app():
     app = Flask(__name__)
-    app.config.from_pyfile('../config.py')
 
-    CORS(app)
+    # Load configuration from your config.py
+    app.config.from_pyfile(os.path.join(os.path.dirname(__file__), '..', 'config.py'))
+
     db.init_app(app)
-    migrate.init_app(app, db)
 
     with app.app_context():
+        # Import and register Blueprints here
         from .routes import changelog_bp
         app.register_blueprint(changelog_bp)
+
+        db.create_all()
 
     return app
