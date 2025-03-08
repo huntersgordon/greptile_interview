@@ -64,6 +64,12 @@ Follow these instructions to set up the project on your local machine. 🛠️
    ```
 
 5. **Initialize the database**:
+   If you encounter issues with the database initialization, you may need to remove existing migrations and the database file:
+   ```bash
+   rm -rf migrations
+   rm database.db
+   ```
+   Then, proceed with the following commands:
    ```bash
    flask db init
    flask db migrate
