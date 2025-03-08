@@ -6,7 +6,7 @@
 
 This project is divided into two main repositories:
 
-1. **Frontend**: Built with React and TypeScript. ⚛️
+1. **Frontend**: Built with React and TypeScript. ⚛️ The frontend provides a developer portal accessible at the `/developer` route, which is used to generate changelogs. It outputs links to the resulting changelogs.
 2. **Backend**: Developed using Flask and Python, with SQLAlchemy for database interactions. 🐍
 
 ## Getting Started
